@@ -9,6 +9,7 @@ on:
     tags:
       - '*'
   pull_request:
+    branches:
       - 'master'
 
 jobs:
@@ -17,8 +18,6 @@ jobs:
     container:
       image: quay.io/haraldh/dracut-fedora:33
       options: "--privileged"
-      privileged: true
-    privileged: true
     timeout-minutes: 45
     strategy:
       matrix:
